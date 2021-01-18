@@ -11,7 +11,7 @@ Below are the directory sturcture in this repo.
 |- report.pdf
 ```
 
-Below is a snippet that guide to download the chest X-ray dataset:
+Here is a snippet that guide yout to download the chest X-ray dataset:
 ![plot](./image/Capture.JPG)
 
 Make sure the data directory look like structure below:

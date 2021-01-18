@@ -142,7 +142,7 @@ for i in os.listdir(VAL_PATH + "/PNEUMONIA"):
 y_actual=np.array(y_actual)
 y_test=np.array(y_test)
 cn=confusion_matrix(y_actual,y_test)  #row: actual; column: predict
-sns.heatmap(ccn, annot=True, fmt="d") #0: Covid ; 1: Normal ; 2: Pneumonia
+sns.heatmap(cn, annot=True, fmt="d") #0: Covid ; 1: Normal ; 2: Pneumonia
 
 
 # print recall, precision, f1 score
