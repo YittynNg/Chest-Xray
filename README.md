@@ -2,6 +2,20 @@
 
 Below are the directory sturcture in this repo.
 ```bash
+|- model
+|  |- basic_cnn_model_covid.h5
+|- plot
+|  |- plot_accuracy.png
+|  |- plot_loss.png
+|- basic_cnn.py
+|- report.pdf
+```
+
+Below is a snippet that guide to download the chest X-ray dataset:
+![plot](./image/Capture.JPG)
+
+Make sure the data directory look like structure below:
+```bash
 |- data
 |  |- train
 |  |  |- COVID-19
@@ -11,13 +25,6 @@ Below are the directory sturcture in this repo.
 |     |- COVID-19
 |     |- NORMAL
 |     |- PNEUMONIA
-|- model
-|  |- basic_cnn_model_covid.h5
-|- plot
-|  |- plot_accuracy.png
-|  |- plot_loss.png
-|- basic_cnn.py
-|- report.pdf
 ```
 
 More details about this chest X-ray classification project can be studied from the [report](report.pdf).
