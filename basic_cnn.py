@@ -43,8 +43,8 @@ print("Training data in total: ",len_train)
 len_val = len(glob.glob(VAL_PATH + "/*/*"))
 print("Test data in total: ",len_val)
 
-# Moulding train images and augment images (TBT: shear_range, zoom_range)
-train_datagen = ImageDataGenerator(rescale = 1./255, rotation_range=15, horizontal_flip = True)
+# Moulding train images and augment images 
+train_datagen = ImageDataGenerator(rescale = 1./255, rotation_range=15, zoom_range = 0.1, horizontal_flip = True)
 test_dataset = ImageDataGenerator(rescale=1./255)
 
 # Reshaping test and validation images 
@@ -62,6 +62,7 @@ validation_generator = test_dataset.flow_from_directory(
 # Build training model
 model = Sequential()
 model.add(Conv2D(32,kernel_size=(3,3),activation='relu',input_shape=(224,224,3)))
+
 model.add(Conv2D(128,(3,3),activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.25))
@@ -153,8 +154,8 @@ print("\nRecall: ", recall)
 print("Overall recall: ", np.mean(recall))
 print("Precision: ", precision)
 print("Overall precision: ", np.mean(precision))
-print("f1 score: ", f1_score)
-print("Overall precision: ", np.mean(f1_score))
+print("F1 score: ", f1_score)
+print("Overall F1 score: ", np.mean(f1_score))
 
 # plot the training loss and accuracy
 N = EPOCHS
